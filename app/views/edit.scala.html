@@ -1,0 +1,18 @@
+@(id: String,data:String) @main("Rakuza") {
+<div data-role="page">
+	<div data-role="header"></div>
+	<div data-role="content">
+		<a class="btn" id="update_btn">update</a>
+		<textarea id="input_data" rows="30" cols="100" style="width: 640px">@data</textarea>
+	</div>
+	<div data-role="footer"></div>
+</div>
+
+
+}{
+
+<script src="@routes.Assets.at("edit.js")" type="text/javascript"></script>
+<script type="text/javascript">
+	initWebSocket("@id")
+</script>
+}
